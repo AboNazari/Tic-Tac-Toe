@@ -10,9 +10,11 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <div class="board circle" id="board">
-      <div class="cell x" data-cell></div>
-      <div class="cell circle" data-cell></div>
+    <!-- The Markup is divided into two stages -->
+    <!-- 1- Board Markup -->
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
@@ -21,6 +23,7 @@
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
     </div>
+    <!-- 2- Result stage -->
     <div class="winning-message" id="winningMessage">
       <div data-winning-message-text></div>
       <button id="restartButton">Restart</button>
