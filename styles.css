@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+/* root variables */
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * 0.9);
+}
+
+.board {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+/* cells design */
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+.cell:first-child,
+.cell:nth-child(2),
+.cell.cell:nth-child(3) {
+  border-top: none;
+}
+.cell:last-child,
+.cell:nth-child(7),
+.cell.cell:nth-child(8) {
+  border-bottom: none;
+}
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+/* X and Circle Marks design*/
+/* X design */
+.cell.x::before,
+.cell.x::after {
+  content: "";
+  width: calc(var(--mark-size) * 0.15);
+  height: var(--mark-size);
+  background-color: black;
+  position: absolute;
+}
+.cell.x::after {
+  transform: rotate(45deg);
+}
+.cell.x::before {
+  transform: rotate(-45deg);
+}
+
+/* Circle Design */
