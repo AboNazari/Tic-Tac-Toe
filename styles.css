@@ -30,7 +30,15 @@ body {
   border: 1px solid black;
   display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
+
+.cell.x,
+.cell.circle {
+  cursor: not-allowed;
+}
+
 .cell:first-child,
 .cell:nth-child(2),
 .cell.cell:nth-child(3) {
@@ -66,3 +74,17 @@ body {
 }
 
 /* Circle Design */
+.cell.circle::after,
+.cell.circle::before {
+  content: "";
+  width: var(--mark-size);
+  height: var(--mark-size);
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+}
+.cell.circle::after {
+  height: calc(var(--mark-size) * 0.7);
+  width: calc(var(--mark-size) * 0.7);
+  background-color: white;
+}
