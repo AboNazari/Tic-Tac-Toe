@@ -88,3 +88,36 @@ body {
   width: calc(var(--mark-size) * 0.7);
   background-color: white;
 }
+
+/* Hover stage of X and Circle design */
+/* X hover stage */
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+  content: "";
+  width: calc(var(--mark-size) * 0.15);
+  height: var(--mark-size);
+  background-color: gray;
+  position: absolute;
+}
+.board.x .cell:not(.x):not(.circle):hover::before {
+  transform: rotate(45deg);
+}
+.board.x .cell:not(.x):not(.circle):hover::after {
+  transform: rotate(-45deg);
+}
+
+/* Circle Hover Stage */
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  content: "";
+  width: var(--mark-size);
+  height: var(--mark-size);
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+}
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  height: calc(var(--mark-size) * 0.7);
+  width: calc(var(--mark-size) * 0.7);
+  background-color: white;
+}
