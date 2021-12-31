@@ -10,9 +10,14 @@ let circleTurn;
 const cells = document.querySelectorAll("[data-cell]");
 const board = document.getElementById("board");
 
-cells.forEach((cell) => {
-  cell.addEventListener("click", clickHandler, { once: true });
-});
+start();
+
+function start() {
+  cells.forEach((cell) => {
+    cell.addEventListener("click", clickHandler, { once: true });
+  });
+  showHover();
+}
 
 function clickHandler(e) {
   const cell = e.target;
@@ -35,6 +40,12 @@ function swapTurns() {
 }
 
 function showHover() {
-  const classHover = circleTurn ? CIRCLE_CLASS : X_CLASS;
-  board.classList.add(classHover);
+  board.classList.remove("x");
+  board.classList.remove("circle");
+
+  if (circleTurn) {
+    board.classList.add(CIRCLE_CLASS);
+  } else {
+    board.classList.add(X_CLASS);
+  }
 }
