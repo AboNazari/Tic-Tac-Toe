@@ -18,6 +18,6 @@
 
 ➡️ Enjoy playing the simple game made with passion. 
 
-➡️ Will be happy to have your comment on making it better!
+➡️ Will be happy to have your comment on making it better!!!
 
 ➡️ Here is the link to the game: https://tic-tac-toe21.netlify.app/
