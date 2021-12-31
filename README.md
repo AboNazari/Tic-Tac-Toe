@@ -11,4 +11,8 @@
 // 3- check for draw; if all the cells contains a class and the win case is not met
 // 4- switch the Turns after each round.
 
-Here is the link to the game webpage:
+➡️ Enjoy playing the simple game made with passion. 
+
+➡️ Will be happy to have your comment on making it better!
+
+➡️ Here is the link to the game webpage:
